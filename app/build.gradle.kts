@@ -30,12 +30,15 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "17"
     }
+  buildFeatures{
+      viewBinding = true
+  }
 }
 
 dependencies {
@@ -48,4 +51,35 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    // Retrofit
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.converter.gson)
+
+    // OkHttp
+    implementation(libs.okhttp)
+    implementation(libs.okhttp.logging)
+
+    // Gson
+    implementation(libs.gson)
+
+    // Lifecycle
+    implementation(libs.lifecycle.extensions)
+    implementation(libs.lifecycle.runtime.ktx)
+    implementation(libs.lifecycle.viewmodel.ktx)
+    implementation(libs.lifecycle.livedata.ktx)
+
+    // Activity
+    implementation(libs.activity.ktx)
+
+    // Glide
+    implementation(libs.glide)
+
+    // External GitHub libraries (not supported via TOML)
+    implementation("com.github.MatteoBattilana:WeatherView:3.0.0")
+    implementation("com.github.Dimezis:BlurView:version-2.0.3")
+}
+
+kapt{
+    correctErrorTypes = true
 }

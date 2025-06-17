@@ -77,7 +77,7 @@ dependencies {
 
     // External GitHub libraries (not supported via TOML)
     implementation("com.github.MatteoBattilana:WeatherView:3.0.0")
-    implementation("com.github.Dimezis:BlurView:version-2.0.3")
+    implementation(libs.blurview)
 }
 
 kapt{

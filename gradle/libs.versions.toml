@@ -1,5 +1,6 @@
 [versions]
 agp = "8.7.3"
+blurview = "version-2.0.3"
 kotlin = "1.9.24"
 coreKtx = "1.16.0"
 junit = "4.13.2"
@@ -17,9 +18,11 @@ lifecycleExt = "2.2.0"
 lifecycleKtx = "2.6.2"
 activityKtx = "1.4.0"
 glide = "4.12.0"
+weatherview = "3.0.0"
 
 [libraries]
 # Retrofit
+blurview = { module = "com.github.Dimezis:BlurView", version.ref = "blurview" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 retrofit_converter_gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
 
@@ -51,6 +54,7 @@ androidx_appcompat = { group = "androidx.appcompat", name = "appcompat", version
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx_activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx_constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+weatherview = { module = "com.github.MatteoBattilana:WeatherView", version.ref = "weatherview" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
